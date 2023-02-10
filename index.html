@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-input">
+            <textarea name="input-text" id="input-text" cols="30" rows="7" placeholder="Ingrese su texto aqui"></textarea>
+            <div class="alert">
+                <img src="https://img.icons8.com/emoji/48/null/warning-emoji.png"/>
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="container-buttons">
+                <button class="btn encriptar" id="encriptar">Encriptar</button>
+                <button class="btn desencriptar" id="desencriptar">Desencriptar</button>
+            </div>
+        </div>
+        <div class="container-message">
+            <div>
+                <img id="to-hide" src="./assets/not-found.jpg" alt="">
+                <h4 id="to-hide">Ningún mensaje fue encontrado</h4>
+                <p id="to-hide">Ingresa el texto que desees encriptar o desencriptar</p>
+                <textarea name="converted-message" id="converted-message" cols="" rows=""></textarea>
+            </div>
+            <button class="btn copy" id="copy">Copiar</button>
+        </div>
+    </div>
+
+</body>
+<script src="./scrip.js"></script>
+</html>

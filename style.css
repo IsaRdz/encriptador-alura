@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+body{
+    background-image: url(./assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-color:#093520;
+}
+.container{
+    
+    margin: 5vh;    
+}
+.container-input{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+textarea{
+    height: 50%;
+}
+textarea, .container-message{
+    padding: 3vh;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    margin: 0 0 2vh;
+}
+
+.container-message{
+    background-color: white;
+    text-align: center;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container-message h4{
+    margin-bottom: 2vh;
+}
+.container-message p{
+    font-size: large;
+    margin-bottom: 2vh;
+}
+.container-message img{
+    display: none;
+}
+#converted-message{
+    border: none;
+    box-shadow: none;
+    background-color: none;
+    height: auto;
+}
+.alert{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: whitesmoke;
+}
+.alert img{
+    width: 18px;
+}
+.alert p{
+    margin: 0.5vh;
+    text-shadow: 1px 1px black;
+    font-size: small;
+}
+.container-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3vh;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.btn{
+    width: 250px;
+    border-radius: 10px;
+    padding: 1.5vh;
+    font-weight: bold;
+    margin: 1vh 0;
+    border: none;
+    box-shadow: 10px 5px 5px #093520;
+    cursor: pointer;
+}
+.copy{
+    width: 80%;
+    background-color: #093520;
+    box-shadow: 2px 2px 4px gray;
+    margin: 1.5vh auto;
+    color: gainsboro;
+    align-self: flex-end;
+    
+}
+.encriptar{
+    background-color: #18834f;
+    color:  gainsboro;
+}
+.desencriptar{
+    background-color:  #065035;
+    color: gainsboro;    
+}
+.hide{
+    display: none;
+}
+@media (min-width: 750px) and (orientation: landscape){
+    .container{
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .container-input{
+        width: 80%;
+        height: 160%;
+        margin-right: 3vw;
+    }
+    .container-message img{
+        display: block;
+        width: 150px;
+        margin: 5vh auto;
+    }
+    .container-buttons .encriptar{
+        margin: 0 3vw 0 2vw;
+    }
+    .container-buttons{
+        display: flex;
+        flex-wrap: nowrap;
+        
+    }
+    .btn{
+        width: 25vw;
+    }
+    
+}
