@@ -23,8 +23,6 @@ https://isardz.github.io/encriptador-alura/
 - CSS
 - JavaScript
 
-![Home Encriptador](https://drive.google.com/file/d/1bn-f3WnrPBk1mqa_gyObxShsY3RhECBt/view?usp=sharing)
-
 ## Desarrolladora
 
 [<img src="https://avatars.githubusercontent.com/u/87336052?v=4" width=115><br><sub>Isabel Rodríguez</sub>](https://www.linkedin.com/in/isabelrod) 
