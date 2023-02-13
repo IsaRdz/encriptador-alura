@@ -41,6 +41,13 @@ textarea, .container-message{
     margin: 0 0 2vh;
 }
 
+.msg-error{
+    text-align: center;
+    color: yellow;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 1vh;
+}
+
 .container-message{
     background-color: white;
     text-align: center;
@@ -77,7 +84,7 @@ textarea, .container-message{
 }
 .alert p{
     margin: 0.5vh;
-    text-shadow: 1px 1px black;
+    text-shadow: 1.5px 1.5px 1px black;
     font-size: small;
 }
 .container-buttons{
@@ -96,6 +103,7 @@ textarea, .container-message{
     border: none;
     box-shadow: 10px 5px 5px #093520;
     cursor: pointer;
+    transition: 0.5s all;
 }
 .copy{
     width: 80%;
@@ -105,13 +113,25 @@ textarea, .container-message{
     color: gainsboro;
     align-self: flex-end;    
 }
+.copy:active{
+    transform: scale(1.05);
+    background-color: #18834f;
+}
 .encriptar{
     background-color: #18834f;
     color:  gainsboro;
 }
+.encriptar:active{
+    transform: scale(1.05);
+    background-color: #065035;
+}
 .desencriptar{
     background-color:  #065035;
     color: gainsboro;    
+}
+.desencriptar:active{
+    transform: scale(1.05);
+    background-color: #18834f;
 }
 
 .hide{
@@ -131,6 +151,12 @@ footer{
     margin-bottom: 0;
     box-shadow: inset 5px 2px 5px #093520;
 }
+.logo{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+}
 .logo img{
     filter: brightness(1.1) ;
     mix-blend-mode: multiply;
@@ -138,11 +164,29 @@ footer{
     transition: transform 0.9s;
 }
 .logo img:hover{
-    scale: 1.1;
+    scale: 1.03;
 }
 .developer{
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 3vh 0 0;
+}
+.developer a{
+    width: 50%;
+}
+.developer a:first-child{
+    text-align: right;
+}
+.developer a:last-child{
+    text-align: left;
+}
+.developer p{    
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 .developer > a > img:hover{
     transform: rotateY(360deg);
@@ -186,5 +230,11 @@ footer{
     footer{
         position: absolute;
         bottom: 0;
+    }
+    .logo{
+        width: 40%;
+    }
+    .developer{
+        width: 40%;
     }
 }

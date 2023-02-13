@@ -4,6 +4,7 @@ const convertedMessage = document.getElementById('converted-message');
 const toHide = document.querySelectorAll('#to-hide');
 const copy = document.getElementById('copy');
 const clean = document.getElementById('clean');
+const msgError = document.getElementById('msg-error');
 
 var inputText;
 var encryptedText;
@@ -24,23 +25,19 @@ const codeDecryp = {
     ufat: "u"
 }
 encriptar.addEventListener("click",()=>{
-    inputText = document.getElementById('input-text').value;
+    validar();
     encryptedText = inputText.replace(/a|e|i|o|u/gi, function(mached){
         return codeEncryp[mached];
     })
-    convertedMessage.style.display="block";
-    convertedMessage.innerText = encryptedText;
-    toHide.forEach(hide => hide.style.display = "none")
+    convertedMessage.innerText = encryptedText;   
 })
 
 desencriptar.addEventListener("click",()=>{
-    inputText = document.getElementById('input-text').value;
+    validar();
     decryptedText = inputText.replace(/ai|enter|imes|ober|ufat/gi, function(mached){
         return codeDecryp[mached];
     })
-    convertedMessage.style.display="block";
     convertedMessage.innerText = decryptedText;
-    toHide.forEach(hide => hide.style.display = "none")
 })
 copy.addEventListener("click",()=>{
     convertedMessage.select();
@@ -51,4 +48,18 @@ clean.addEventListener("click",()=>{
     document.getElementById('input-text').value = "";
     convertedMessage.style.display = "none";
     toHide.forEach(hide => hide.style.display = "block")
+    msgError.classList.add('hide');
 })
+
+const validar = () =>{
+    const patron = /[A-Z\u00C0-\u017F\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    inputText = document.getElementById('input-text').value;
+    if(patron.test(inputText) || inputText==""){
+        console.log("Error");
+        msgError.classList.remove('hide');
+    }else{
+        convertedMessage.style.display="block";
+        toHide.forEach(hide => hide.style.display = "none");
+        msgError.classList.add('hide');
+    }
+}
